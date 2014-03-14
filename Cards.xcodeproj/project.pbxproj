@@ -22,6 +22,7 @@
 		00BB0CC818D39F9900CC6846 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00BB0CA718D39F9900CC6846 /* UIKit.framework */; };
 		00BB0CD018D39F9900CC6846 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00BB0CCE18D39F9900CC6846 /* InfoPlist.strings */; };
 		00BB0CD218D39F9900CC6846 /* CardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BB0CD118D39F9900CC6846 /* CardsTests.m */; };
+		00BB0CDD18D3A04000CC6846 /* GBWCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BB0CDC18D3A04000CC6846 /* GBWCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		00BB0CCD18D39F9900CC6846 /* CardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CardsTests-Info.plist"; sourceTree = "<group>"; };
 		00BB0CCF18D39F9900CC6846 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		00BB0CD118D39F9900CC6846 /* CardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardsTests.m; sourceTree = "<group>"; };
+		00BB0CDB18D3A04000CC6846 /* GBWCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBWCard.h; sourceTree = "<group>"; };
+		00BB0CDC18D3A04000CC6846 /* GBWCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBWCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				00BB0CB218D39F9900CC6846 /* GBWAppDelegate.h */,
+				00BB0CDB18D3A04000CC6846 /* GBWCard.h */,
+				00BB0CDC18D3A04000CC6846 /* GBWCard.m */,
 				00BB0CB318D39F9900CC6846 /* GBWAppDelegate.m */,
 				00BB0CB518D39F9900CC6846 /* Main_iPhone.storyboard */,
 				00BB0CB818D39F9900CC6846 /* Main_iPad.storyboard */,
@@ -277,6 +282,7 @@
 			files = (
 				00BB0CB018D39F9900CC6846 /* main.m in Sources */,
 				00BB0CBD18D39F9900CC6846 /* GBWViewController.m in Sources */,
+				00BB0CDD18D3A04000CC6846 /* GBWCard.m in Sources */,
 				00BB0CB418D39F9900CC6846 /* GBWAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
