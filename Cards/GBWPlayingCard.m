@@ -47,4 +47,11 @@
     return _suit ? _suit : @"?";
 }
 
+- (void)setRank:(NSUInteger)rank
+{
+    if( rank <= [GBWPlayingCard maxRank]) {
+        _rank = rank;
+    }
+}
+
 @end
