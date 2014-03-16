@@ -20,10 +20,14 @@
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }
 
++ (NSArray *)validSuits {
+    return @[@"♥", @"♦", @"♠", @"♣"];
+}
+
 
 - (void)setSuit:(NSString *)suit
 {
-    if([@[@"♥", @"♦", @"♠", @"♣"] containsObject:suit]) {
+    if([[GBWPlayingCard validSuits] containsObject:suit]) {
         _suit = suit;
     }
 }

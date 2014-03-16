@@ -16,4 +16,6 @@
 // works on all platforms (e.g. 32-bit vs 64-bit).
 @property (nonatomic) NSUInteger rank;
 
++ (NSArray *)validSuits;
+
 @end
