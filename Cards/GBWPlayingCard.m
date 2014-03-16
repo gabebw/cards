@@ -15,15 +15,25 @@
 // Override getter from superclass
 - (NSString *) contents
 {
-    NSArray *rankStrings = @[@"?", @"A", @"2", @"3", @"4", @"5", @"6", @"7",
-                             @"8", @"9", @"10", @"J", @"Q", @"K"];
-    return [rankStrings[self.rank] stringByAppendingString:self.suit];
+    NSString *rankString = [GBWPlayingCard rankStrings][self.rank];
+    return [rankString stringByAppendingString:self.suit];
 }
 
-+ (NSArray *)validSuits {
++ (NSArray *)validSuits
+{
     return @[@"♥", @"♦", @"♠", @"♣"];
 }
 
++ (NSArray *)rankStrings
+{
+  return @[@"?", @"A", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10",
+           @"J", @"Q", @"K"];
+}
+
++ (NSUInteger)maxRank
+{
+    return [[self rankStrings] count] - 1;
+}
 
 - (void)setSuit:(NSString *)suit
 {
