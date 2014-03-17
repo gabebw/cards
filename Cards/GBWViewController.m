@@ -7,10 +7,13 @@
 //
 
 #import "GBWViewController.h"
+#import "GBWPlayingCardDeck.h"
+#import "GBWPlayingCard.h"
 
 @interface GBWViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
+@property (nonatomic) GBWPlayingCardDeck *deck;
 @end
 
 @implementation GBWViewController
@@ -23,22 +26,19 @@
     NSLog(@"flip count = %d", self.flipCount);
 }
 
-- (IBAction)clickCard:(UIButton *)sender {
-    UIImage *cardBack = [UIImage imageNamed:@"cardback"];
-    UIImage *cardFront = [UIImage imageNamed:@"cardfront"];
-
-    int isFront = [sender.currentTitle length];
-    if(isFront){
-        [sender setTitle:@""
-                forState:UIControlStateNormal];
-        [sender setBackgroundImage:cardBack
-                          forState:UIControlStateNormal];
-    } else {
-        [sender setTitle:@"A♣︎"
-                forState:UIControlStateNormal];
-        [sender setBackgroundImage:cardFront
-                          forState:UIControlStateNormal];
+-(GBWPlayingCardDeck *)deck {
+    if(! _deck){
+        _deck = [[GBWPlayingCardDeck alloc] init];
     }
+    
+    return _deck;
+}
+
+- (IBAction)clickCard:(UIButton *)sender {
+    GBWCard *nextCard = [self.deck drawRandomCard];
+    
+    [sender setTitle:[nextCard contents]
+            forState:UIControlStateNormal];
     
     // Trigger setFlipCount
     self.flipCount++;
