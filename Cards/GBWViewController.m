@@ -9,10 +9,19 @@
 #import "GBWViewController.h"
 
 @interface GBWViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
+@property (nonatomic) int flipCount;
 @end
 
 @implementation GBWViewController
+
+- (void)setFlipCount:(int)flipCount
+{
+    _flipCount = flipCount;
+    NSString *newText = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+    self.flipsLabel.text = newText;
+    NSLog(@"flip count = %d", self.flipCount);
+}
 
 - (IBAction)clickCard:(UIButton *)sender {
     UIImage *cardBack = [UIImage imageNamed:@"cardback"];
@@ -30,6 +39,9 @@
         [sender setBackgroundImage:cardFront
                           forState:UIControlStateNormal];
     }
+    
+    // Trigger setFlipCount
+    self.flipCount++;
 }
 
 @end
