@@ -15,7 +15,7 @@
 // Override getter from superclass
 - (NSString *) contents
 {
-    NSString *rankString = [GBWPlayingCard rankStrings][self.rank];
+    NSString *rankString = [[self class] rankStrings][self.rank];
     return [rankString stringByAppendingString:self.suit];
 }
 
@@ -37,7 +37,7 @@
 
 - (void)setSuit:(NSString *)suit
 {
-    if([[GBWPlayingCard validSuits] containsObject:suit]) {
+    if([[[self class] validSuits] containsObject:suit]) {
         _suit = suit;
     }
 }
@@ -49,7 +49,7 @@
 
 - (void)setRank:(NSUInteger)rank
 {
-    if( rank <= [GBWPlayingCard maxRank]) {
+    if( rank <= [[self class] maxRank]) {
         _rank = rank;
     }
 }

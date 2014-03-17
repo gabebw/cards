@@ -25,6 +25,7 @@
 		00BB0CDD18D3A04000CC6846 /* GBWCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BB0CDC18D3A04000CC6846 /* GBWCard.m */; };
 		00E7E49518D61C0B00908CC8 /* GBWDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E7E49418D61C0B00908CC8 /* GBWDeck.m */; };
 		00E7E49818D6240D00908CC8 /* GBWPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E7E49718D6240D00908CC8 /* GBWPlayingCard.m */; };
+		00E7E49D18D66B1700908CC8 /* GBWPlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E7E49C18D66B1700908CC8 /* GBWPlayingCardDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		00E7E49418D61C0B00908CC8 /* GBWDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBWDeck.m; sourceTree = "<group>"; };
 		00E7E49618D6240D00908CC8 /* GBWPlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBWPlayingCard.h; sourceTree = "<group>"; };
 		00E7E49718D6240D00908CC8 /* GBWPlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBWPlayingCard.m; sourceTree = "<group>"; };
+		00E7E49B18D66B1700908CC8 /* GBWPlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBWPlayingCardDeck.h; sourceTree = "<group>"; };
+		00E7E49C18D66B1700908CC8 /* GBWPlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBWPlayingCardDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				00E7E49418D61C0B00908CC8 /* GBWDeck.m */,
 				00E7E49618D6240D00908CC8 /* GBWPlayingCard.h */,
 				00E7E49718D6240D00908CC8 /* GBWPlayingCard.m */,
+				00E7E49B18D66B1700908CC8 /* GBWPlayingCardDeck.h */,
+				00E7E49C18D66B1700908CC8 /* GBWPlayingCardDeck.m */,
 				00BB0CB318D39F9900CC6846 /* GBWAppDelegate.m */,
 				00BB0CB518D39F9900CC6846 /* Main_iPhone.storyboard */,
 				00BB0CB818D39F9900CC6846 /* Main_iPad.storyboard */,
@@ -296,6 +301,7 @@
 				00BB0CBD18D39F9900CC6846 /* GBWViewController.m in Sources */,
 				00BB0CDD18D3A04000CC6846 /* GBWCard.m in Sources */,
 				00BB0CB418D39F9900CC6846 /* GBWAppDelegate.m in Sources */,
+				00E7E49D18D66B1700908CC8 /* GBWPlayingCardDeck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
