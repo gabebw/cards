@@ -15,6 +15,7 @@
 // Referred to as `addCard:atTop`
 - (void)addCard:(GBWCard *)card atTop:(BOOL)atTop;
 - (void)addCard:(GBWCard *)card;
+- (BOOL)hasCards;
 
 -(GBWCard *)drawRandomCard;
 

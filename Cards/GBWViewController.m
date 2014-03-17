@@ -35,11 +35,16 @@
 }
 
 - (IBAction)clickCard:(UIButton *)sender {
-    GBWCard *nextCard = [self.deck drawRandomCard];
+    if([self.deck hasCards]){
+        GBWCard *nextCard = [self.deck drawRandomCard];
     
-    [sender setTitle:[nextCard contents]
-            forState:UIControlStateNormal];
-    
+        [sender setTitle:[nextCard contents]
+                forState:UIControlStateNormal];
+    } else {
+        [sender setTitle:@"N/A"
+                forState:UIControlStateNormal];
+    }
+
     // Trigger setFlipCount
     self.flipCount++;
 }

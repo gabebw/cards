@@ -25,6 +25,11 @@
     return _cards;
 }
 
+- (BOOL)hasCards
+{
+    return [self.cards count];
+}
+
 - (void) addCard:(GBWCard *)card atTop:(BOOL)atTop
 {
     if( atTop ) {
