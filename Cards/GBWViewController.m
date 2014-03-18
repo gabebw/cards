@@ -8,7 +8,7 @@
 
 #import "GBWViewController.h"
 #import "GBWPlayingCardDeck.h"
-#import "GBWPlayingCard.h"
+#import "GBWCard.h"
 
 @interface GBWViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -35,16 +35,29 @@
 }
 
 - (IBAction)clickCard:(UIButton *)sender {
-    if([self.deck hasCards]){
-        GBWCard *nextCard = [self.deck drawRandomCard];
-    
-        [sender setTitle:[nextCard contents]
-                forState:UIControlStateNormal];
-    } else {
-        [sender setTitle:@"N/A"
-                forState:UIControlStateNormal];
-    }
+    UIImage *cardBack = [UIImage imageNamed:@"cardback"];
+    UIImage *cardFront = [UIImage imageNamed:@"cardfront"];
 
+    int isFront = [sender.currentTitle length];
+    
+    if(isFront){
+        [sender setTitle:@""
+                forState:UIControlStateNormal];
+        [sender setBackgroundImage:cardBack
+                          forState:UIControlStateNormal];
+    } else {
+        if([self.deck hasCards]){
+            GBWCard *card = [self.deck drawRandomCard];
+            [sender setTitle:card.contents
+                    forState:UIControlStateNormal];
+        } else {
+            [sender setTitle:@"N/A"
+                    forState:UIControlStateNormal];
+        }
+        [sender setBackgroundImage:cardFront
+                          forState:UIControlStateNormal];
+    }
+    
     // Trigger setFlipCount
     self.flipCount++;
 }
