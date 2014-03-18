@@ -13,7 +13,7 @@
 @interface GBWViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
-@property (nonatomic) GBWPlayingCardDeck *deck;
+@property (nonatomic) GBWDeck *deck;
 @end
 
 @implementation GBWViewController
@@ -26,12 +26,17 @@
     NSLog(@"flip count = %d", self.flipCount);
 }
 
--(GBWPlayingCardDeck *)deck {
+-(GBWDeck *)deck {
     if(! _deck){
-        _deck = [[GBWPlayingCardDeck alloc] init];
+        _deck = [self createDeck];
     }
     
     return _deck;
+}
+
+-(GBWDeck *)createDeck
+{
+    return [[GBWPlayingCardDeck alloc] init];
 }
 
 - (IBAction)clickCard:(UIButton *)sender {
